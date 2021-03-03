@@ -17,7 +17,7 @@ namespace Rabona {
 
 		//Window Attribute
 		
-		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.Width; }
+		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 

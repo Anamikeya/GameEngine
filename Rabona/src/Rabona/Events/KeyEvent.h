@@ -11,12 +11,10 @@ namespace Rabona {
 
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
-		
 		KeyEvent(int keycode)
 			: m_KeyCode(keycode) {}
-		
 		int m_KeyCode;
-		int m_KeyCode;
+	
 		
 	};
 
@@ -45,6 +43,7 @@ namespace Rabona {
 
 	class RABONA_API KeyReleasedEvent : public KeyEvent
 	{
+	public:
 		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}
 

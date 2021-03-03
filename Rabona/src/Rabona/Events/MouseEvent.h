@@ -7,14 +7,13 @@ namespace Rabona {
 	
 	class RABONA_API MouseMovedEvent : public Event
 	{
+	
+	public:
 		MouseMovedEvent(float x, float y)
-			:m_MouseX(x), m_MouseY(y) 
-		{
+			:m_MouseX(x), m_MouseY(y) {}
 
-		}
-
-		inline float GetX() { return m_MouseX;  }
-		inline float GetY() { return m_MouseY; }
+		inline float GetX() const { return m_MouseX;  }
+		inline float GetY() const { return m_MouseY; }
 
 		std::string ToString() const override
 		{
@@ -24,9 +23,10 @@ namespace Rabona {
 		}
 		
 		EVENT_CLASS_TYPE(MouseMoved)
-		EVENT_CLASS_TYPE(EventCategoryMouse | EventsCategoryInput)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
-		float m_MouseX, m_MouseY;
+		float m_MouseX;
+		float m_MouseY;
 	};
 
 	class RABONA_API MouseScrollEvent : public Event
@@ -41,12 +41,12 @@ namespace Rabona {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseScrolledEvent  :" << GetXOffset() << ", " << GetYOffset;
+			ss << "MouseScrolledEvent  :" << GetXOffset() << ", " << GetYOffset();
 			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(MouseScrolled)
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCatgoryInput)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
 	private:
 		float m_XOffset, m_YOffset;
@@ -58,7 +58,7 @@ namespace Rabona {
 
 		inline int GetMouseButton() const { return m_Button; }
 
-		EVENT_CLASS_CATEGORY(EventCategoryMouse |  EVentCategoryInput)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse |  EventCategoryInput)
 	protected:
 		MouseButtonEvent(int button)
 			: m_Button(button) {}
