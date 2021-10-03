@@ -37,6 +37,12 @@
     <ClInclude Include="src\Rabona\Events\MouseEvent.h">
       <Filter>Rabona\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rabona\Layer.h">
+      <Filter>Rabona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rabona\LayerStack.h">
+      <Filter>Rabona</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rabona\Log.h">
       <Filter>Rabona</Filter>
     </ClInclude>
@@ -47,6 +53,7 @@
       <Filter>Rabona</Filter>
     </ClInclude>
     <ClInclude Include="src\rbpch.h" />
+    <ClInclude Include="src\Rabona\ImGui\ImGuiLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -55,9 +62,16 @@
     <ClCompile Include="src\Rabona\Application.cpp">
       <Filter>Rabona</Filter>
     </ClCompile>
+    <ClCompile Include="src\Rabona\Layer.cpp">
+      <Filter>Rabona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rabona\LayerStack.cpp">
+      <Filter>Rabona</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rabona\Log.cpp">
       <Filter>Rabona</Filter>
     </ClCompile>
     <ClCompile Include="src\rbpch.cpp" />
+    <ClCompile Include="src\Rabona\ImGui\ImGuiLayer.cpp" />
   </ItemGroup>
 </Project>

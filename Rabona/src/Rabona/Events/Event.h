@@ -57,7 +57,7 @@ namespace Rabona
 
 		}
 
-	protected:
+	public:
 		bool m_Handeled = false;   //this is to handel the event like when you clicked but removed the miouse from that place wir=thout releasing that 
 									//event shouldnt take palce
 

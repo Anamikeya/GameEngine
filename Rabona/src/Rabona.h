@@ -5,6 +5,7 @@
 
 #include "Rabona/Application.h"
 #include "Rabona/Log.h"
+#include "Rabona/Layer.h"
 
 //----------Entry Point-----------------------------------
 #include"Rabona/EntryPoint.h"
